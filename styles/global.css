@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;600;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: Manrope, sans-serif;
+}
+
+html {
+  line-height: 1.5;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: pointer;
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  border: inherit;
+  box-shadow: inherit;
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role='button'] {
+  cursor: pointer;
+}
+
+.layout {
+  position: relative;
+  min-height: 100vh;
+  background-color: rgb(19 17 45);
+  color: rgb(255 255 255);
+}
+
+.page_container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .page_container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .page_container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page_container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page_container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .page_container {
+    max-width: 1536px;
+  }
+}
+
+.primary_button {
+  border-radius: 0.75rem;
+  background-image: linear-gradient(to right, var(--gradient-stops));
+  --gradient-from: #3b82f6;
+  --gradient-to: rgb(59 130 246 / 0);
+  --gradient-stops: var(--gradient-from), var(--gradient-to);
+  --gradient-to: #1d4ed8;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  font-weight: 500;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-colored: 0 4px 6px -1px var(--shadow-color),
+    0 2px 4px -2px var(--shadow-color);
+  box-shadow: var(--ring-offset-shadow, 0 0 #0000),
+    var(--ring-shadow, 0 0 #0000), var(--shadow);
+  transition-property: color, background-color, border-color, fill, stroke,
+    opacity, box-shadow, transform, filter, -webkit-text-decoration-color,
+    -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.primary_button:hover {
+  --gradient-from: #2563eb;
+  --gradient-to: rgb(37 99 235 / 0);
+  --gradient-stops: var(--gradient-from), var(--gradient-to);
+  --gradient-to: #1e40af;
+}
+
+.secondary_button {
+  border-radius: 0.75rem;
+  background-color: rgb(58 60 101);
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  font-weight: 500;
+  color: rgb(255 255 255);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.secondary_button:hover {
+  background-color: rgb(45 47 94);
+}

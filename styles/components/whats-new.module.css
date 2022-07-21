@@ -1,0 +1,298 @@
+.title_container {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+.content_container {
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+  place-items: start;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .content_container {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+.article_container {
+  grid-column: span 1 / span 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.article_container > :not([hidden]) ~ :not([hidden]) {
+  --space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(1rem * var(--space-y-reverse));
+}
+
+@media (min-width: 768px) {
+  .article_container {
+    grid-column: span 5 / span 5;
+  }
+}
+
+.article_card {
+  display: grid;
+  cursor: pointer;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  transition-property: color, background-color, border-color, fill, stroke,
+    opacity, box-shadow, transform, filter, -webkit-text-decoration-color,
+    -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.article_card:hover {
+  background-color: rgb(24 22 54);
+}
+
+@media (min-width: 768px) {
+  .article_card {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+.article_card_image_container {
+  position: relative;
+  grid-column: span 1 / span 1;
+  height: 15rem;
+  width: 100%;
+  border-radius: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .article_card_image_container {
+    height: auto;
+    width: auto;
+  }
+}
+
+.article_card_image {
+  border-radius: 0.75rem;
+}
+
+.article_card_content {
+  grid-column: span 1 / span 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.article_card_content > :not([hidden]) ~ :not([hidden]) {
+  --space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(1rem * var(--space-y-reverse));
+}
+
+.article_card_content {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .article_card_content {
+    grid-column: span 2 / span 2;
+  }
+}
+
+.article_card_platform_text {
+  border-radius: 0.75rem;
+
+  background-color: rgb(32 32 69);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+.article_card_title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  .article_card_title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.article_card_desc {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: rgb(156 163 175);
+}
+
+@media (min-width: 768px) {
+  .article_card_desc {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.subscribe_card_container {
+  grid-column: span 1 / span 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.subscribe_card_container > :not([hidden]) ~ :not([hidden]) {
+  --space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(1rem * var(--space-y-reverse));
+}
+
+@media (min-width: 768px) {
+  .subscribe_card_container {
+    grid-column: span 2 / span 2;
+  }
+}
+
+.article_publisher_container {
+  display: flex;
+  align-items: center;
+}
+
+.article_publisher_container > :not([hidden]) ~ :not([hidden]) {
+  --space-x-reverse: 0;
+  margin-right: calc(0.75rem * var(--space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--space-x-reverse)));
+}
+
+.publisher_logo_container {
+  position: relative;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 0.75rem;
+}
+
+.publisher_logo {
+  border-radius: 0.75rem;
+}
+
+.publisher_name {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* subscribe card */
+
+.subscribe_card_container {
+  grid-column: span 1 / span 1;
+  border-radius: 0.75rem;
+  background-color: rgb(24 22 54);
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .subscribe_card_container {
+    grid-column: span 2 / span 2;
+    padding: 1.5rem;
+  }
+}
+
+.subscribe_card_container span {
+  border-radius: 0.75rem;
+  background-color: rgb(202 138 4 / 0.5);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  color: rgb(253 224 71);
+}
+
+.subscribe_title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .subscribe_title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+.subscribe_desc {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: rgb(156 163 175);
+}
+
+@media (min-width: 768px) {
+  .subscribe_desc {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.subscribe_email_input {
+  width: 100%;
+  border-radius: 0.75rem;
+  background-color: rgb(32 32 69);
+  padding: 0.625rem;
+  color: rgb(243 244 246);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.subscribe_email_input:focus {
+  outline-color: #3b82f6;
+}
+
+@media (min-width: 640px) {
+  .subscribe_email_input {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
